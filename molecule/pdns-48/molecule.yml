@@ -10,14 +10,19 @@ dependency:
   name: galaxy
 
 platforms:
-  - name: rockylinux-8
-    groups: ["pdns"]
-    image: rockylinux:8
-    dockerfile_tpl: centos-systemd
+#   - name: rockylinux-8
+#     groups: ["pdns"]
+#     image: rockylinux:8
+#     dockerfile_tpl: centos-systemd
+# 
+#   - name: almalinux-8
+#     groups: ["pdns"]
+#     image: almalinux:8
+#     dockerfile_tpl: centos-systemd
 
-  - name: almalinux-8
+  - name: almalinux-10
     groups: ["pdns"]
-    image: almalinux:8
+    image: almalinux:10
     dockerfile_tpl: centos-systemd
 
   - name: rockylinux-9
@@ -35,9 +40,9 @@ platforms:
     image: oraclelinux:9
     dockerfile_tpl: centos-systemd
 
-  - name: oraclelinux-8
+  - name: oraclelinux-10
     groups: ["pdns"]
-    image: oraclelinux:8
+    image: oraclelinux:10
     dockerfile_tpl: centos-systemd
 
   - name: ubuntu-2204
@@ -89,7 +94,7 @@ provisioner:
   name: ansible
   options:
     diff: True
-    v: True
+    vvv: True
     forks: '1'
   config_options:
     defaults:
